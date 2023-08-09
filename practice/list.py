@@ -4,6 +4,9 @@ print(numbers)
 string = ["hello", "baby", "sweet", "food", "blue"]
 print(string)
 
+name = "Ashley"
+print(name[0])
+
 float = [3.4, 3.4, 2.1, 5.7, 8.9, 9.3]
 print(float)
 

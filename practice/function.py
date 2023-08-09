@@ -28,27 +28,59 @@
 # main()
 # greater(5, 2)
 
-def greater(number1, number2, number3, number4):
-    maximum = number1
-    if number2 > maximum:
-        maximum = number2
-    if number3 > maximum:
-        maximum = number3
-    if number4 > maximum:
-        maximum = number4
-    return maximum
-    #print(f'The greater number is {maximum}')
+# def greater(number1, number2, number3, number4):
+#     maximum = number1
+#     if number2 > maximum:
+#         maximum = number2
+#     if number3 > maximum:
+#         maximum = number3
+#     if number4 > maximum:
+#         maximum = number4
+#     return maximum
+#     # print(f'The greater number is {maximum}')
+#
+#
+# def small(number1, number2, number3):
+#     minimum = number1
+#     if number2 < number1:
+#         minimum = number2
+#     if number3 < number2:
+#         minimum = number3
+#     return minimum
+#
+#
+# # print(f'The smallest number is {minimum}')
+#
+#
+# print(greater(250, 10, 102, 110))
+# print(small(20, 4, 8))
+#
+#
+# def main():
+#     print(f"""
+#         function1()
+#         function2()""")
+#
+#
+# def function1():
+#     print("esther+ed")
+#
+#
+# def function2():
+#     print("grace")
+#
+#
+# main()
+
+x = 2 # Do not manipulate your global variable in your function,because it can mess up your function
 
 
-def small(number1, number2, number3):
-    minimum = number1
-    if number2 < number1:
-        minimum = number2
-    if number3 < number2:
-        minimum = number3
-    return minimum
-   # print(f'The smallest number is {minimum}')
+def testfunc():
+    global x
+    x += 1
+    return x
 
 
-print(greater(250, 10, 102, 110))
-print(small(20, 4, 8))
+print(testfunc())
+print(testfunc())
+print(x)

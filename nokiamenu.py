@@ -13,32 +13,32 @@ def main_menu():
         11. Clock
         12. Profiles
         13. SIM services""")
-    option = int(input("Enter your option:  "))
-    if option == 1:
+    option = input('Enter your option:  ')
+    if option == '1':
         phonebook()
-    elif option == 2:
+    elif option == '2':
         messages()
-    elif option == 3:
+    elif option == '3':
         chat()
-    elif option == 4:
+    elif option == '4':
         call_register()
-    elif option == 5:
+    elif option == '5':
         tones()
-    elif option == 6:
+    elif option == '6':
         settings()
-    elif option == 7:
+    elif option == '7':
         call_divert()
-    elif option == 8:
+    elif option == '8':
         games()
-    elif option == 9:
+    elif option == '9':
         calculator()
-    elif option == 10:
+    elif option == '10':
         reminders()
-    elif option == 11:
+    elif option == '11':
         clock()
-    elif option == 12:
+    elif option == '12':
         profiles()
-    elif option == 13:
+    elif option == '13':
         sim_services()
     else:
         print('invalid option')
@@ -53,19 +53,55 @@ def main_menu():
 #   main_menu()
 # if option == 0:
 #   back_menu1()
+def memory_status():
+    print(f"""
+        1. previous
+        2. Back to phonebook
+        3. Main menu""")
+    option = input("Enter your option:  ")
+    if option == '1':
+        options()
+    elif option == '2':
+        phonebook()
+    elif option == '3':
+        main_menu()
+    else:
+        print('Invalid option')
+        options()
+
+
+def type_of_view():
+    print(f"""
+        1. previous
+        2. Back to phonebook
+        3. Main menu""")
+    option = input("Enter your option:  ")
+    if option == '1':
+        options()
+    elif option == '2':
+        phonebook()
+    elif option == '3':
+        main_menu()
+    else:
+        print('Invalid option')
+        options()
 
 
 def options():
     print(f"""
-            1. Type of view
-            2. Memory status
-            3. Previous
-            4. Main menu""")
-    option = int(input("Enter your option:  "))
-    if option == 4:
-        main_menu()
-    elif option == 3:
+        1. Type of view
+        2. Memory status
+        3. Previous
+        4. Main menu""")
+    option = input("Enter your option:  ")
+    if option == '1':
+        type_of_view()
+    elif option == '2':
+        memory_status()
+    elif option == '3':
         phonebook()
+    elif option == '4':
+        main_menu()
     else:
         print('Invalid option')
         options()
@@ -84,11 +120,14 @@ def phonebook():
         9. Speed dials
         10. Voice tags
         11. main menu""")
-    option = int(input("Enter your option:  "))
-    if option == 11:
+    option = input("Enter your option:  ")
+    if option == '11':
         main_menu()
-    elif option == 8:
+    elif option == '8':
         options()
+    else:
+        print('Invalid option')
+        main_menu()
 
 
 def set_():
@@ -100,11 +139,11 @@ def set_():
            5. Back to messages
            6. Main menu""")
     option = int(input("Enter your option:  "))
-    if option == 4:
+    if option == '4':
         message_settings()
-    elif option == 5:
+    elif option == '5':
         messages()
-    elif option == 6:
+    elif option == '6':
         main_menu()
     else:
         print('Invalid option')
@@ -120,11 +159,11 @@ def common():
             5. Back to messages
             6. Main menu""")
     option = int(input("Enter your option:  "))
-    if option == 4:
+    if option == '4':
         message_settings()
-    elif option == 5:
+    elif option == '5':
         messages()
-    elif option == 6:
+    elif option == '6':
         main_menu()
     else:
         print('Invalid option')
@@ -138,13 +177,13 @@ def message_settings():
             3. previous
             4. main menu""")
     option = int(input("Enter your option:  "))
-    if option == 4:
+    if option == '4':
         main_menu()
-    elif option == 1:
+    elif option == '1':
         set_()
-    elif option == 2:
+    elif option == '2':
         common()
-    elif option == 3:
+    elif option == '3':
         messages()
     else:
         print('Invalid option')
@@ -165,16 +204,19 @@ def messages():
         10. Service command editor
         11. main menu""")
     option = int(input("Enter your option:  "))
-    if option == 11:
+    if option == '11':
         main_menu()
-    if option == 7:
+    if option == '7':
         message_settings()
-    if option == 1:
+    if option == '1':
         set_()
         option = int(input("Enter your option:  "))
-    if option == 2:
+    if option == '2':
         common()
         option = int(input("Enter your option:  "))
+    else:
+        print('Invalid option')
+        main_menu()
 
 
 def chat():
@@ -182,7 +224,10 @@ def chat():
         Chat
         1. Back to menu""")
     option = int(input("Enter your option:  "))
-    if option == 1:
+    if option == '1':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
@@ -196,9 +241,9 @@ def show_call_duration():
             6. Back to call register
             7. main menu""")
     option = int(input("Enter your option:  "))
-    if option == 6:
+    if option == '6':
         call_register()
-    elif option == 7:
+    elif option == '7':
         main_menu()
     else:
         print('Invalid option')
@@ -213,11 +258,10 @@ def show_call_costs():
             4. Back to call register
             5.. main menu""")
     option = int(input("Enter your option:  "))
-    if option == 5:
+    if option == '5':
         main_menu()
-    elif option == 4:
+    elif option == '4':
         call_register()
-
     else:
         print('Invalid option')
         show_call_costs()
@@ -230,9 +274,9 @@ def call_cost_settings():
             3. Back to call register
             4. main menu""")
     option = int(input("Enter your option:  "))
-    if option == 3:
+    if option == '3':
         call_register()
-    elif option == 4:
+    elif option == '4':
         main_menu()
     else:
         print('Invalid option')
@@ -251,13 +295,16 @@ def call_register():
         8. Prepaid credit
         9. main menu""")
     option = int(input("Enter your option:  "))
-    if option == 5:
+    if option == '5':
         show_call_duration()
-    if option == 6:
+    if option == '6':
         show_call_costs()
-    if option == 7:
+    if option == '7':
         call_cost_settings()
-    if option == 9:
+    if option == '9':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
@@ -274,7 +321,10 @@ def tones():
       9. Screen saver
       10. Back""")
     option = int(input("Enter your option:  "))
-    if option == 10:
+    if option == '10':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
@@ -283,9 +333,12 @@ def restore_factory_settings():
             1. Previous
             2. Main menu""")
     option = int(input("Enter your option:  "))
-    if option == 1:
+    if option == '1':
         settings()
-    if option == 2:
+    if option == '2':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
@@ -300,13 +353,13 @@ def security_settings():
           7. Back to settings
           8. Main menu""")
     option = int(input("Enter your option:  "))
-    if option == 7:
+    if option == '7':
         settings()
-    elif option == 8:
+    elif option == '8':
         main_menu()
     else:
         print('Invalid option')
-        message_settings()
+        settings()
 
 
 def phone_settings():
@@ -320,13 +373,13 @@ def phone_settings():
              7. Back to settings
              8. Main menu""")
     option = int(input("Enter your option:  "))
-    if option == 7:
+    if option == '7':
         settings()
-    elif option == 8:
+    elif option == '8':
         main_menu()
     else:
         print('Invalid option')
-        message_settings()
+        settings()
 
 
 def call_settings():
@@ -340,13 +393,13 @@ def call_settings():
             7. Back to settings
             8. Main menu""")
     option = int(input("Enter your option:  "))
-    if option == 7:
+    if option == '7':
         settings()
-    elif option == 8:
+    elif option == '8':
         main_menu()
     else:
         print('Invalid option')
-        message_settings()
+        settings()
 
 
 def settings():
@@ -357,18 +410,17 @@ def settings():
         4. Restore factory settings
         5. main menu""")
     option = int(input("Enter your option:  "))
-    if option == 5:
+    if option == '5':
         main_menu()
-    if option == 1:
+    if option == '1':
         call_settings()
-    if option == 2:
+    if option == '2':
         phone_settings()
-    if option == 3:
+    if option == '3':
         security_settings()
     else:
         print('Invalid option')
         settings()
-
 
 
 def call_divert():
@@ -376,7 +428,10 @@ def call_divert():
         Call divert
         1. Back""")
     option = int(input("Enter your option:  "))
-    if option == 1:
+    if option == '1':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
@@ -385,16 +440,22 @@ def games():
         games
         1. Back""")
     option = int(input("Enter your option:  "))
-    if option == 1:
+    if option == '1':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
 def calculator():
     print(f"""
         calculator
-        0. Back""")
+        1. Back""")
     option = int(input("Enter your option:  "))
-    if option == 0:
+    if option == '1':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
@@ -403,7 +464,10 @@ def reminders():
         reminder
         1. Back""")
     option = int(input("Enter your option:  "))
-    if option == 1:
+    if option == '1':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
@@ -417,7 +481,10 @@ def clock():
         6. Auto update of date and time
         7. Main menu""")
     option = int(input("Enter your option:  "))
-    if option == 7:
+    if option == '7':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
@@ -426,7 +493,10 @@ def profiles():
         profiles
         1. Back""")
     option = int(input("Enter your option:  "))
-    if option == 1:
+    if option == '1':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
@@ -435,7 +505,10 @@ def sim_services():
         SIM services
         1. Back""")
     option = int(input("Enter your option:  "))
-    if option == 1:
+    if option == '1':
+        main_menu()
+    else:
+        print('Invalid option')
         main_menu()
 
 
