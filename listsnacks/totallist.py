@@ -1,9 +1,11 @@
 def total_list(num):
     total = 0
+    new_list = []
     for sums in num:
         total += sums
-    return total
+        new_list.append(total)
+    return new_list
+    print(total_list())
 
-
-numbers = [100, 20, 2, 70, 23, 50, 9, 71, 33, 1]
-print(total_list(numbers))
+numbers = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+# print(total_list(numbers))
